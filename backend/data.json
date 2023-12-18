@@ -1,0 +1,17 @@
+[
+    {
+        "id":1,
+        "title": "Web Development",
+        "details":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ipsum non esse eaque aliquam quae debitis fuga nemo perferendis perspiciatis dignissimos itaque, voluptates ipsa sapiente ab modi ullam, repellat est."
+    },
+    {
+        "id":2,
+        "title": "React",
+        "details":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ipsum non esse eaque aliquam quae debitis fuga nemo perferendis perspiciatis dignissimos itaque, voluptates ipsa sapiente ab modi ullam, repellat est."
+    },
+    {
+        "id":3,
+        "title": "MERN",
+        "details":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ipsum non esse eaque aliquam quae debitis fuga nemo perferendis perspiciatis dignissimos itaque, voluptates ipsa sapiente ab modi ullam, repellat est."
+    }
+]

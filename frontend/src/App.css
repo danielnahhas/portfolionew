@@ -1,0 +1,11 @@
+.App{
+  margin: -10px;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  background: black;
+  color: #fff;
+}
+html{
+  scroll-behavior: smooth;
+}
