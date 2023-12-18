@@ -84,7 +84,7 @@ const ExperienceList = () => {
           <div>
             {experiences.map((experice, index) => (
               <div key={index}>
-                <h2>Title:{experice.title}</h2>
+                <h2>Title: {experice.title}</h2>
                 <p>Description: {experice.desc}</p>
                 <p>About: {experice.about}</p>
                 <p>Tags: {experice.tags}</p>
