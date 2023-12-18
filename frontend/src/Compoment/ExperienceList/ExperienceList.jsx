@@ -26,7 +26,6 @@ const ExperienceList = () => {
         setUser(response.data.user);
         setProjects(response.data.projects);
         setExperiences(response.data.experiences);
-        console.log("proj", projects);
       } catch (error) {
         console.error("Error fetching experiences:", error);
       }
