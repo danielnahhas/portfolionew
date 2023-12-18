@@ -37,6 +37,7 @@ const ExperienceList = () => {
 
   return (
     <div className="container">
+      <h1 className="sub_title">My Services</h1>
       <div>
         <button className="btn btn2" onClick={handleId2}>
           John
@@ -48,34 +49,55 @@ const ExperienceList = () => {
       <div className="data-container">
         <div className="data-item">
           <h2 className="data-title">User</h2>
-          <ul>
-            <li>
-              <h3>{user.name}</h3>
-              <h3>{user.email}</h3>
-            </li>
-          </ul>
+          <div>
+            <div>
+              <h3>Name: {user.name}</h3>
+              <h3>Email: {user.email}</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
+                eveniet illum facere magnam dolorum sapiente architecto tempora
+                eum, deleniti rem cumque nisi neque cupiditate modi, doloremque
+                commodi odit id ratione?
+              </p>
+            </div>
+          </div>
         </div>
         <div className="data-item">
           <h2 className="data-title">Projects</h2>
-          <ul>
+          <div>
             {projects.map((project, index) => (
-              <li key={index}>
-                <h3>{project.title}</h3>
-                <p>{project.desc}</p>
-              </li>
+              <div key={index}>
+                <h2>Title: {project.title}</h2>
+                <p>Description: {project.desc}</p>
+                <p>Tags: {project.tags}</p>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
+                  eveniet illum facere magnam dolorum sapiente architecto
+                  tempora eum, deleniti rem cumque nisi neque cupiditate modi,
+                  doloremque commodi odit id ratione?
+                </p>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
         <div className="data-item">
           <h2 className="data-title">Experiences</h2>
-          <ul>
+          <div>
             {experiences.map((experice, index) => (
-              <li key={index}>
-                <h3>{experice.title}</h3>
-                <p>{experice.desc}</p>
-              </li>
+              <div key={index}>
+                <h2>Title:{experice.title}</h2>
+                <p>Description: {experice.desc}</p>
+                <p>About: {experice.about}</p>
+                <p>Tags: {experice.tags}</p>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
+                  eveniet illum facere magnam dolorum sapiente architecto
+                  tempora eum, deleniti rem cumque nisi neque cupiditate modi,
+                  doloremque commodi odit id ratione?
+                </p>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </div>
