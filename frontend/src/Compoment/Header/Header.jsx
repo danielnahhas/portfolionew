@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-
+import { Link } from "react-router-dom";
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
 
@@ -19,20 +19,22 @@ function Header() {
           <img src="/assets/logo.png" className="logo" alt="logo" />
           <ul id="sidemenu" style={{ right: showMenu ? "0" : "-240px" }}>
             <li>
-              <a href="#header">Home</a>
+              <Link to={"/Login"}>Login</Link>
+            </li>
+
+            <li>
+              <Link to={"/"}>About</Link>
             </li>
             <li>
-              <a href="#about">About</a>
+              <Link to={"/ExperienceList"}>Experience</Link>
             </li>
             <li>
-              <a href="#services">Services</a>
+              <Link to={"/MyWork"}>Work</Link>
             </li>
             <li>
-              <a href="#mywork">My Work</a>
+              <Link to={"/Contact"}>Contact</Link>
             </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
+
             {showMenu ? (
               <i className="fa-solid fa-x" onClick={closeMenu}></i>
             ) : (
@@ -41,12 +43,7 @@ function Header() {
           </ul>
           <i className="fa-solid fa-bars" onClick={openMenu}></i>
         </nav>
-        <div className="header-text">
-          <p>Lorem ipsum dolor</p>
-          <h1>
-            Lorem <span>ipsum</span> <br /> dolor sit amet
-          </h1>
-        </div>
+        
       </div>
     </div>
   );

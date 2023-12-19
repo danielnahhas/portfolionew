@@ -1,15 +1,37 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const bodyParser = require("body-parser");
+const jwt = require("jsonwebtoken");
 
 const db = require("./models");
 const { users, user_experiences, user_projects } = require("./models");
+const userss = {
+  username: "user123",
+  // In production, use bcrypt to hash passwords before storage
+  password: "password123",
+};
 
 app.use(
   cors({
     origin: "*",
   })
 );
+app.use(bodyParser.json());
+app.post("/login", (req, res) => {
+  const { username, password } = req.body;
+
+  // Check if the username and password match
+  if (username === userss.username && password === userss.password) {
+    // Generate a JWT token
+    const token = jwt.sign({ username }, "your_secret_key", {
+      expiresIn: "1h",
+    });
+    res.json({ token }); // Send the token as response
+  } else {
+    res.status(401).json({ message: "Invalid credentials" });
+  }
+});
 
 db.sequelize.sync().then((req) => {
   app.listen(3000, () => {
